@@ -14,7 +14,6 @@ const forecast = (lat, long, callback) => {
         }
         else{
             const {temperature, feelslike, weather_descriptions, humidity, uv_index} = body.current
-            console.log(body.current)
             callback(undefined, `The weather is ${weather_descriptions[0].toLowerCase()}. It is currently ${temperature}, and feels like ${feelslike}. The humidity is ${humidity}%, and UV index is ${uv_index}.`)
         }
     })
